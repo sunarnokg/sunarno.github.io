@@ -1,0 +1,216 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUNARNO SERVICE (AC-kulkas-mesincuci)</title>
+    <p>Selamat datang di WEBSITE SUNARNO Service :AC, kulkas, mesin cuci</p>
+    <link rel="stylesheet"  href="style.css">
+    <script src="script.js"></script>
+   <style>
+  
+        /* Gaya untuk navbar */
+        nav {
+            background-color: #446e9d ;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        /* Gaya tombol keyboard */
+        nav ul li a {
+            color: black;
+            text-decoration: none;
+            padding: 5px 2px;
+            background-color: yellow; /* Warna dasar tombol */
+           
+            border: 5px solid brown;
+            box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.3); /* Efek bayangan 3D */
+            font-family: 'Courier New', Courier, monospace; /* Font mirip tombol keyboard */
+            display: inline-flex;
+            transition: transform 0.2s, box-shadow 0.2s; /* Efek klik */
+        }
+
+        /* Efek hover */
+        nav ul li a:hover {
+            background-color: green ;/* Warna lebih gelap saat hover */
+            box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4); /* Bayangan lebih jelas saat hover */
+        }
+
+        /* Efek klik */
+        nav ul li a:active {
+            transform: translateY(2px); /* Efek tombol ditekan */
+            box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Bayangan lebih kecil saat ditekan */
+        }
+        </style>
+</head>
+<body>
+
+  <div  class="content">           <h3>TENTANG KAMI </h3>
+  <p1>Kami adalah teknisi yang sudah bertahun -tahun berpengalaman dalam bidang perbaikan alat -alat elektronik : AC, kulkas, mesin cuci.  </p1>
+  <br>
+    Kami melayani wilayah: Jakarta Barat, Jakarta Selatan, Tangerang & Tangerang Selatan.
+    <br>
+  <span>
+    Untuk pelayanan service bisa menghubungi:
+    <br>
+    Hp:087882594460.
+    <br>
+    WA:087882594460.
+  </span>
+    </div>
+    <div class="container">
+      <div class=form Contact>
+        <form name='SUNARNO-SERVICE-contact-form' action="/submit-form" method="post"> 
+    <nav>
+        <ul
+        class= "nav-links">  
+        <div class="col">
+          <div class=col-md-4>
+            <div class="card">
+              <img src= "IMG_outdoor-AC.jpg"/>
+              <div class="card-body">
+                <h5 class="card-title"></h5>
+                <p class="card-text"> </p>
+                <li>
+                <a href=
+                <label>
+                  <input type="checkbox" name="service" value="AC">  Service AC
+                </label>
+              </a></li> 
+              </div>
+            </div>
+          </div>
+         
+            <div class="col-md-4"> 
+              <img src="IMG_Kulkas-2-pintu.jpg"/><br>
+              <div class="card-body">
+                <h5 class="card-title"> </h5>
+                <p class="card-text"><p>
+                <li>
+                  <a href=
+                  <label>
+                    <input type="checkbox" name="service" value="Kulkas">Service Kulkas
+                  </label>
+                </a></li>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-4">
+            <img src="IMG_mesin cuci 2 tabung.jpg"><br>
+            <div class="card-body">
+              <p class="card-text"></p>
+              <li>
+              <a href=
+                <label>
+                  <input type="checkbox" name="service" value="Mesin Cuci"> Service Mesin Cuci 
+                </label>
+                      </a></li>
+            </div>
+          </div>
+        </ul>
+    </nav>
+</div>
+<br>
+<div class="container">
+  <div class="row align-items-center">
+    <div class="col">
+      <select class="form-control">
+        <option>Jenis Produk</option>  
+        <option>AC</option>
+        <option>Kulkas</option>
+        <option>Mesin Cuci</option>
+    </div>
+    <div class="col">
+    </div>
+    <input type="text" class="form-control" placeholder="Merk" aria-label="Merk">
+  </div>
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Model" aria-label="Model">
+    </div>
+  </div>
+    
+    <h2>Order Service</h2>
+   
+        <label for="nama">Nama:</label>
+        <input type="text" id="nama" name="nama"
+        placeholder="Masukan nama" required>
+               <div>
+            <label for="phone">Nomor HP /Telp:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Masukkan nomor HP /Telp" required>
+        </div> 
+    <div>
+            <label for="address">Alamat:</label>
+            <textarea id="address" name="address" rows="4" cols="50" placeholder="Masukkan alamat lengkap " required></textarea>
+        </div>
+
+
+ <label for="komentar">Silahkan tulis keluhanya:</label>
+  <textarea id="komentar" name="komentar" rows="4" cols="50">
+  </textarea>
+  <br>
+        <button type="submit">Kirim</button>
+    </form>
+  </div>
+    <script>
+      const scriptURL = ' https://script.google.com/macros/s/AKfycbyEclu2wG_36S2sOhLB1hHPajLJ11CYVC-MnYorr11m-26BL1-frgNWU471N_iAb0eS/exec '
+      const form = document.forms['SUNARNO-SERVICE-contact-form'];
+      const btnKirim = document.querySelector('.btn-kirim');
+      const btnLoading = document.querySelector('.btn-loading');
+      const myAlert = Document.querySelector('.my-alert');
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        btnLoading.classList.toggle('d-none');
+        btnKirim.classList.toggle('d-none');
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => console.log('Success!', response))
+          .catch(error => console.error('Error!', error.message))
+      })
+    </script>
+
+     <div id="thankYouMessage" class="thank-you-message">Terima kasih telah menghubungi kami!</div>
+    </div>
+    <script src="script.js"></script>
+   
+</body>
+</html>
+
+
+
+
+
+
+    
+          
+          
+            
+            
+            
+            
+              
+    
+    
+    
+   
+    
+    
+    
+    
+   
+     
+  
+
+
